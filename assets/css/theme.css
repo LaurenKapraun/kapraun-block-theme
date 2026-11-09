@@ -1,108 +1,167 @@
-/**
- * Lauren Kapraun Portfolio theme styles.
- * Loaded on the site and in the site editor by functions.php.
-*/
-
-/* Tokens */
 :root {
-	--box-shadow: 0 12px 32px rgba(38, 49, 60, 0.1);
-	--global-radius: 3px;
-	--border-color: var(--wp--preset--color--custom-border, #c9b7af);
-	--accent: var(--wp--preset--color--custom-harbor-blue);
-	--transition: 0.3s ease-in-out;
+  --box-shadow: 0 12px 32px rgba(38, 49, 60, 0.1);
+  --global-radius: 3px;
 }
 
-/* Transitions */
-
-a,
-button,
-.wp-block-button__link,
-.wp-block-navigation-item__content {
-	transition:
-		color var(--transition),
-		background-color var(--transition),
-		border-color var(--transition),
-		box-shadow var(--transition);
+* {
+    transition: all 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		transition: none !important;
-	}
-}
-
-/* Header */
-
-/* Sticky header fix: sit below the admin bar when logged in */
-header:has(> .is-position-sticky) {
+/* Sticky Header Bug Fix */
+header:has(>.is-position-sticky) {
 	position: sticky;
-	top: var(--wp-admin--admin-bar--height, 0px);
+	top: calc( 0px + var( --wp-admin--admin-bar--height, 0px ) );
 	z-index: 100;
+}
 
-	/* The admin bar stops being fixed at 600px and below */
-	@media (max-width: 600px) {
+@media (max-width: 600px) {
+	header:has(>.is-position-sticky) {
 		top: 0;
 	}
 }
 
-/* Navigation link colors, all screen sizes */
+/* Header Styles */
 .header-navigation li {
-	&.current-menu-item > a,
-	> a:hover,
-	> a:focus {
-		color: var(--accent) !important;
-	}
+    &.current-menu-item > a {
+        color: var(--wp--preset--color--custom-harbor-blue) !important;
+    }
+
+    > a:hover, > a:focus {
+        color: var(--wp--preset--color--custom-harbor-blue) !important;
+    }
 }
 
-/* Underline and submenu cards, from 645px up (the overlay takes over below) */
+/* Stats CTA */
+.stats-cta {
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        border: 1px solid #c9b7af;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        border: 1px solid #c9b7af;
+    }
+
+    .wp-block-column {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #c9b7af;
+        }
+
+        @media (max-width: 781px) {
+            &:not(:last-child) {
+                &::before {
+                    bottom: -10px;
+                    left: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 1px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        @media (min-width: 781px) {
+            &:not(:last-child) {
+                &::before {
+                    right: -10px;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    height: 80%;
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+}
+
+/* CTA Blocks */
+.cta-block {
+    &.vertical, &.horizontal {
+        box-shadow: var(--box-shadow);
+        border-radius: var(--global-radius);
+        overflow: hidden;
+    }
+}
+
+/* Medium Width Content */
+.width-medium {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 @media (min-width: 645px) {
-	ul.header-navigation > li {
-		> a {
-			position: relative;
+    /* Header Navigation */
+    ul.header-navigation > li {
+        > a {
+            position: relative;
 
-			&::before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				width: 0;
-				height: 2px;
-				transform: translateX(-50%);
-				background-color: var(--accent);
-				transition: width 0.3s ease-out;
-			}
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                transform: translate(-50%, 0);
+                background-color: var(--wp--preset--color--custom-harbor-blue);
+                transition: 0.3s ease-out;
+            }
 
-			&:hover::before,
-			&:focus::before {
-				width: calc(100% - 35px);
-			}
-		}
+            &:hover::before, &:focus::before {
+                width: calc(100% - 35px);
+                margin: 0 auto;
+            }
+        }
 
-		&.current-menu-ancestor > a {
-			color: var(--accent) !important;
-		}
+        &.current-menu-ancestor > a {
+            color: var(--wp--preset--color--custom-harbor-blue) !important;
+        }
 
-		&.current-menu-ancestor > a::before,
-		&.current-menu-item > a::before {
-			width: calc(100% - 35px);
-		}
-	}
+        &.current-menu-ancestor > a::before, 
+        &.current-menu-item > a::before {
+            width: calc(100% - 35px);
+            margin: 0 auto;
+        }
+    }
 
-	.wp-block-navigation__submenu-container {
-		box-shadow: var(--box-shadow);
-		border-radius: var(--global-radius);
-		overflow: hidden !important;
+    /* Header Navigation Submenu */
+    .wp-block-navigation__submenu-container {
+        box-shadow: var(--box-shadow);
+        border-radius: var(--global-radius);
+        overflow: hidden !important;
 
-		> li {
-			&.current-menu-item > a,
-			> a:hover,
-			> a:focus {
-				background-color: var(--wp--preset--color--custom-lace);
-			}
-		}
-	}
+        > li {
+            &.current-menu-item > a {
+                background-color: var(--wp--preset--color--custom-lace);
+            }
+            > a {
+                &:hover, &:focus {
+                    background-color: var(--wp--preset--color--custom-lace);
+                }
+            }
+        }
+    }
 }
 
 /* Mobile overlay up to 644px (WordPress stops at 599px) */
@@ -110,85 +169,7 @@ header:has(> .is-position-sticky) {
 	.wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: flex;
 	}
-
 	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
 		display: none;
-	}
-}
-
-/*  Layout helpers */
-.width-medium {
-	width: 100%;
-	max-width: 1120px;
-	margin-inline: auto;
-}
-
-/*  Stats box (double fine-line border, like a bookplate) */
-
-.stats-cta {
-	position: relative;
-	width: 100%;
-	max-width: 1120px;
-	margin-left: auto;
-	box-shadow: var(--box-shadow);
-
-	/* Two inset frames; pointer-events: none keeps links underneath clickable */
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		border: 1px solid var(--border-color);
-		pointer-events: none;
-	}
-
-	&::before {
-		inset: 10px;
-	}
-
-	&::after {
-		inset: 20px;
-	}
-
-	/* Dividers between stats */
-	.wp-block-column {
-		position: relative;
-
-		&:not(:last-child)::before {
-			content: '';
-			position: absolute;
-			background-color: var(--border-color);
-			pointer-events: none;
-		}
-
-		/* Stacked (below 782px, where WordPress stacks columns): short horizontal rule */
-		@media (max-width: 781px) {
-			&:not(:last-child)::before {
-				bottom: -10px;
-				left: 25%;
-				width: 50%;
-				height: 1px;
-			}
-		}
-
-		/* Side by side: vertical rule, 80% tall, centered */
-		@media (min-width: 782px) {
-			&:not(:last-child)::before {
-				top: 10%;
-				right: -10px;
-				width: 1px;
-				height: 80%;
-			}
-		}
-	}
-}
-
-/* CTA cards (Selected Work) */
-
-.cta-block {
-	&.vertical,
-	&.horizontal {
-		box-shadow: var(--box-shadow);
-		border-radius: var(--global-radius);
-		overflow: hidden;
 	}
 }
