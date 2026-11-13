@@ -61,6 +61,11 @@ header:has(>.is-position-sticky) {
     .wp-block-column {
         position: relative;
 
+        p {
+            position: relative;
+            z-index: 1;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -152,12 +157,18 @@ header:has(>.is-position-sticky) {
         overflow: hidden !important;
 
         > li {
-            &.current-menu-item > a {
+            a {
                 background-color: var(--wp--preset--color--custom-lace);
+                color: var(--wp--preset--color--custom-harbor-blue) !important;
+            }
+            &.current-menu-item > a {
+                color: var(--wp--preset--color--custom-lace) !important;
+                background-color: var(--wp--preset--color--custom-slate-ink);
             }
             > a {
                 &:hover, &:focus {
-                    background-color: var(--wp--preset--color--custom-lace);
+                    color: var(--wp--preset--color--custom-lace) !important;
+                    background-color: var(--wp--preset--color--custom-slate-ink);
                 }
             }
         }
