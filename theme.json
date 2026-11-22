@@ -67,6 +67,7 @@
 				{
 					"fontFace": [
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Libre Caslon Text\"",
 							"fontStyle": "normal",
 							"fontWeight": "400",
@@ -75,6 +76,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Libre Caslon Text\"",
 							"fontStyle": "normal",
 							"fontWeight": "700",
@@ -83,6 +85,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Libre Caslon Text\"",
 							"fontStyle": "italic",
 							"fontWeight": "400",
@@ -98,6 +101,7 @@
 				{
 					"fontFace": [
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "200",
@@ -106,6 +110,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "300",
@@ -114,6 +119,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "400",
@@ -122,6 +128,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "500",
@@ -130,6 +137,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "600",
@@ -138,6 +146,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "700",
@@ -146,6 +155,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "800",
@@ -154,6 +164,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "normal",
 							"fontWeight": "900",
@@ -162,6 +173,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "200",
@@ -170,6 +182,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "300",
@@ -178,6 +191,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "400",
@@ -186,6 +200,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "500",
@@ -194,6 +209,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "600",
@@ -202,6 +218,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "700",
@@ -210,6 +227,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "800",
@@ -218,6 +236,7 @@
 							]
 						},
 						{
+							"fontDisplay": "swap",
 							"fontFamily": "\"Nunito Sans\"",
 							"fontStyle": "italic",
 							"fontWeight": "900",
