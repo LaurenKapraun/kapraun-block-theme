@@ -175,6 +175,12 @@ header:has(>.is-position-sticky) {
     }
 }
 
+@media (max-width: 780px) {
+    footer .wp-block-navigation__container {
+        justify-content: left;
+    }
+}
+
 /* Mobile overlay up to 644px (WordPress stops at 599px) */
 @media (min-width: 600px) and (max-width: 644px) {
 	.wp-block-navigation__responsive-container-open:not(.always-shown) {
