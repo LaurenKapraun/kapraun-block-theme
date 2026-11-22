@@ -2,8 +2,6 @@
 
 The custom WordPress block theme behind [laurenkapraun.com](https://laurenkapraun.com). I designed and built it to show the same skills the site talks about: clean front-end code, a design system in `theme.json`, and a site that stays fast and easy to change.
 
-![The laurenkapraun.com homepage](screenshot.png)
-
 ## At a glance
 
 | | |
